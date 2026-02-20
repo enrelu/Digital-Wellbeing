@@ -46,12 +46,13 @@ This extension was crafted using modern web development standards and a robust M
 
 ## ⚙️ Installation & Development
 
-### For Users (Install Unpacked)
-1. Clone or download this repository.
-2. Open Google Chrome and navigate to `chrome://extensions/`.
-3. Enable **Developer mode** in the top right corner.
-4. Click **Load unpacked** and select the `/dist` folder inside this project.
-5. Pin the extension to your toolbar and enjoy!
+### For Users
+1. Download the extension release from [this link](https://github.com/enrelu/Digital-Wellbeing/archive/refs/tags/v1.0.0.zip).
+2. Extract the downloaded `.zip` file to a folder on your computer.
+3. Open Google Chrome and navigate to `chrome://extensions/`.
+4. Enable **Developer mode** using the toggle in the top right corner.
+5. Click the **Load unpacked** button and select the `/dist` folder inside the extracted directory.
+6. Pin the extension to your toolbar to get started!
 
 ### For Developers
 If you wish to modify the extension or build it from the source:
