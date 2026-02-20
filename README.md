@@ -23,8 +23,6 @@ Whether you're trying to optimize your deep work, limit doom-scrolling, or simpl
 
 ## 📸 Screenshots
 
-*(To display these images, name your provided screenshots as `popup.png` and `dashboard.png` and place them inside the `assets/` folder of this repository).*
-
 ### Dashboard View
 <kbd>
   <img src="assets/dashboard.png" alt="Dashboard View" />
