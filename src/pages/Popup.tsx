@@ -1,6 +1,6 @@
 import { useUsageData } from '../hooks/useUsageData';
 import { getCategoryForDomain, CATEGORY_COLORS } from '../categories';
-import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell } from 'recharts';
 
 export function Popup() {
     const { data, loading } = useUsageData();
@@ -59,26 +59,24 @@ export function Popup() {
                         </div>
                     </div>
 
-                    <div className="h-40 w-full mb-6">
+                    <div className="h-40 w-full mb-6 flex justify-center items-center overflow-hidden">
                         {chartData.length > 0 ? (
-                            <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
-                                <PieChart>
-                                    <Pie
-                                        data={chartData}
-                                        cx="50%"
-                                        cy="50%"
-                                        innerRadius={40}
-                                        outerRadius={65}
-                                        paddingAngle={3}
-                                        dataKey="value"
-                                        stroke="none"
-                                    >
-                                        {chartData.map((entry, index) => (
-                                            <Cell key={`cell-${index}`} fill={CATEGORY_COLORS[entry.name] || CATEGORY_COLORS['Other']} />
-                                        ))}
-                                    </Pie>
-                                </PieChart>
-                            </ResponsiveContainer>
+                            <PieChart width={300} height={160}>
+                                <Pie
+                                    data={chartData}
+                                    cx="50%"
+                                    cy="50%"
+                                    innerRadius={40}
+                                    outerRadius={65}
+                                    paddingAngle={3}
+                                    dataKey="value"
+                                    stroke="none"
+                                >
+                                    {chartData.map((entry, index) => (
+                                        <Cell key={`cell-${index}`} fill={CATEGORY_COLORS[entry.name] || CATEGORY_COLORS['Other']} />
+                                    ))}
+                                </Pie>
+                            </PieChart>
                         ) : (
                             <div className="h-full flex items-center justify-center text-zinc-600 text-sm">
                                 No data for today yet.
